@@ -11,8 +11,10 @@ document.addEventListener('keypress', function(){
     if(!started){
         console.log("game is started");
         started=true;
+        document.querySelector("body").style.background= "linear-gradient(270deg, #ff7e5f, #feb47b, #6a11cb)"
+        levelUp();
     }
-    levelUp();
+    
 });
 
 function btnflash(btn){
@@ -31,20 +33,24 @@ function levelUp(){
     let randbtn = document.querySelector(`.${randcolor}`);
 
     gameseq.push(randcolor);
-    btnflash(randbtn);
+    setTimeout(() => {
+        btnflash(randbtn)
+    }, 1000);
+    
 }
 
 function checkAns(idx){
     if(userseq[idx]==gameseq[idx]){
         if(userseq.length==gameseq.length){
-            setTimeout(levelUp(),3000);
+            levelUp();
         }
     }
     else{
         h3.innerText=`Game Over! Your score was ${level}. Press a key to try again`;
-        document.querySelector("body").style.backgroundColor = "red";
+        document.querySelector("body").style.background = "red";
+        h3.style.color="red";
         setTimeout(function(){
-            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.backgroundImage = "url('D:/Delta/simon_says/360_F_524014970_oTHyQ4HW2uePcTikr2E8Z84XTwu9vSdM.jpg')";
         },150)
         reset();
     }

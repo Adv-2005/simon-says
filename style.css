@@ -1,6 +1,17 @@
 body{
     text-align: center;
+    /* background-color: blue;  */
+     background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a11cb); 
+     animation: gradientAnimation 8s ease infinite; 
+    
 }
+
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }  
+
 .btns{
 height: 200px;
 width: 200px;
@@ -12,6 +23,12 @@ margin: 5px;
 .btn-container{
     display: flex;
     justify-content: center;
+    background-color: #2C2F33;
+    border-radius: 20%;
+    width: max-content;
+    padding: 2rem;
+    justify-self: center;
+    
 }
 .red{
     background-color: #d95980;
