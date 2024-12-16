@@ -50,7 +50,7 @@ function checkAns(idx){
         document.querySelector("body").style.background = "red";
         h3.style.color="red";
         setTimeout(function(){
-            document.querySelector("body").style.backgroundImage = "url('360_F_524014970_oTHyQ4HW2uePcTikr2E8Z84XTwu9vSdM.jpg')";
+            document.querySelector("body").style.backgroundImage = 'url("bg.jpg")';
         },150)
         reset();
     }
